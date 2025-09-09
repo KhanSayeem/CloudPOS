@@ -9,7 +9,7 @@ class DemoSeeder extends Seeder
 {
     public function run(): void
     {
-        $admin = User::firstOrCreate(
+        $admin = User::updateOrCreate(
             ['email' => 'admin@example.com'],
             [
                 'name' => 'Admin User',
@@ -18,7 +18,7 @@ class DemoSeeder extends Seeder
         );
         $admin->assignRole('Admin');
 
-        $cashier = User::firstOrCreate(
+        $cashier = User::updateOrCreate(
             ['email' => 'cashier@example.com'],
             [
                 'name' => 'Cashier User',

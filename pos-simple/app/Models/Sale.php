@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sale extends Model
 {
     protected $fillable = [
-        'user_id','customer_id','subtotal','discount_total','tax_total','total','status'
+        'user_id','customer_id','subtotal','discount_total','tax_total','total','status','notes'
     ];
 
     public function items(){ return $this->hasMany(SaleItem::class); }

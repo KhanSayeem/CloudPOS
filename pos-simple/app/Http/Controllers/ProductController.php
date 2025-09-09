@@ -47,7 +47,12 @@ class ProductController extends Controller
             'name'        => ['required','string','max:255'],
             'description' => ['nullable','string'],
             'price'       => ['required','numeric','min:0'],
+            'cost_price'  => ['nullable','numeric','min:0'],
             'stock'       => ['required','integer','min:0'],
+            'min_stock'   => ['required','integer','min:0'],
+            'max_stock'   => ['nullable','integer','min:0'],
+            'supplier'    => ['nullable','string','max:255'],
+            'category_id' => ['nullable','exists:categories,id'],
             'status'      => ['nullable','boolean'],
         ]);
 
@@ -58,7 +63,7 @@ class ProductController extends Controller
 
         return redirect()
             ->route('products.index')
-            ->with('success', 'Product created.');
+            ->with('success', 'Product created successfully.');
     }
 
     /**
@@ -89,7 +94,12 @@ class ProductController extends Controller
             'name'        => ['required','string','max:255'],
             'description' => ['nullable','string'],
             'price'       => ['required','numeric','min:0'],
+            'cost_price'  => ['nullable','numeric','min:0'],
             'stock'       => ['required','integer','min:0'],
+            'min_stock'   => ['required','integer','min:0'],
+            'max_stock'   => ['nullable','integer','min:0'],
+            'supplier'    => ['nullable','string','max:255'],
+            'category_id' => ['nullable','exists:categories,id'],
             'status'      => ['nullable','boolean'],
         ]);
 
@@ -99,7 +109,7 @@ class ProductController extends Controller
 
         return redirect()
             ->route('products.index')
-            ->with('success', 'Product updated.');
+            ->with('success', 'Product updated successfully.');
     }
 
     /**
