@@ -34,6 +34,10 @@
                     </x-nav-link>
                 @endrole
                 @hasanyrole('Admin|Cashier')
+                    <x-nav-link :href="route('orders.index')" :active="request()->routeIs('orders.*')">
+                        {{ __('Order Management') }}
+                    </x-nav-link>
+
                     <x-nav-link :href="route('sales.index')" :active="request()->routeIs('sales.*')">
                         {{ __('Sales History') }}
                     </x-nav-link>
