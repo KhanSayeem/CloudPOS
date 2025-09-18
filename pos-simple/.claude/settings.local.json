@@ -6,7 +6,10 @@
       "Bash(php artisan:*)",
       "Bash(composer install:*)",
       "Bash(composer:*)",
-      "Read(//c/Users/Hi/Downloads/**)"
+      "Read(//c/Users/Hi/Downloads/**)",
+      "Bash(php:*)",
+      "Bash(git add:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

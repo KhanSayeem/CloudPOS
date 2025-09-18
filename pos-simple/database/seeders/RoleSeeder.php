@@ -15,8 +15,9 @@ class RoleSeeder extends Seeder
         // Clear cached roles/permissions to avoid duplication issues
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
-        // Create roles if they don’t exist
+        // Create roles if they don't exist
         Role::firstOrCreate(['name' => 'Admin']);
         Role::firstOrCreate(['name' => 'Cashier']);
+        Role::firstOrCreate(['name' => 'Customer']);
     }
 }

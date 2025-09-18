@@ -16,8 +16,9 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         $this->call([
-            RoleSeeder::class,     // creates Admin, Cashier
+            RoleSeeder::class,     // creates Admin, Cashier, Customer
             DemoSeeder::class,     // creates admin@example.com & cashier@example.com, assigns roles
+            CustomerSeeder::class, // creates customer@example.com with Customer role
             ProductSeeder::class,  // creates 20 products
             SaleSeeder::class,     // creates 5 demo sales using products & cashier
         ]);
